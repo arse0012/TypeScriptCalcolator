@@ -12,16 +12,19 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <title>Hello app</title>
+  <title>Collect words app</title>
 </head>
 
 <body>
-  <h1>Hello</h1>
+  <h1>Words</h1>
   <div id="app">
-    <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+    <input v-model="word" placeholder="Type a word">
+    <button v-on:click="Save()" class="btn btn-primary">Save</button>
+    <button v-on:click="Show()" class="btn btn-primary">Show</button>
+    <button v-on:click="Clear()" class="btn btn-primary">Clear</button>
+    <div>{{ collection }}</div>
   </div>
+  
 
   <script src="bundle.js"></script>
 </body>
