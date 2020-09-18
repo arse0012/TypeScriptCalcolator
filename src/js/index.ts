@@ -23,7 +23,7 @@ new Vue({
         Show() {
             this.collection=this.words.toString()
             if(this.words == ""){
-                this.collection="No words"
+                this.collection="List is empty"
             }
             else{
                 this.collection = this.words
@@ -31,7 +31,9 @@ new Vue({
         },
         Clear(){
             this.words=[]
-            this.collection=[]
+            if(this.collection=[]){
+                this.collection=""
+            }
         }
     }
 })
